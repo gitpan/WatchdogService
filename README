@@ -1,0 +1,57 @@
+NAME
+    Watchdog::Service - Perl extension to monitor services
+
+SYNOPSIS
+      use Watchdog::Service;
+      $s = new Watchdog::Service($name,$pstring);
+      print $s->id, $s->is_alive ? ' is alive' : ' is dead', "\n";
+
+DESCRIPTION
+    Watchdog::Service is an extension for monitoring services
+    running on a Unix host. The class provides a trivial method for
+    determining whether a service is alive. More sophisticated
+    methods can be implemented by creating subclasses of
+    Watchdog::Service e.g. Watchdog::HTTPService uses the status of
+    an HTTP 'GET' method to decide if a web server is alive.
+
+AUTHOR
+    Paul Sharpe <paul@miraclefish.com>
+
+COPYRIGHT
+    Copyright (c) 1998 Paul Sharpe. England. All rights reserved.
+    This program is free software; you can redistribute it and/or
+    modify it under the same terms as Perl itself.
+
+
+Prerequisites
+=============
+Alias
+Proc::ProcessTable
+
+Installation
+============
+
+perl Makefile.PL
+make
+make test
+make install
+
+To Do
+=====
+
+History
+=======
+3-Sep-1998                  Paul Sharpe                   <paul@miraclefish.com>
+--------------------------------------------------------------------------------
+Release 0.01
+- Initial release.
+
+4-Sep-1998                  Paul Sharpe                   <paul@miraclefish.com>
+--------------------------------------------------------------------------------
+Release 0.02
+- Corrected bug in Watchdog::Service SYNOPSIS.
+
+24-Sep-1998                 Paul Sharpe                   <paul@miraclefish.com>
+--------------------------------------------------------------------------------
+Release 0.03
+- Bug fixes.
